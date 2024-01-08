@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Css</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          'sm': '657px',
+          // => @media (min-width: 640px) { ... }
+
+          'md': '768px',
+          // => @media (min-width: 768px) { ... }
+
+          'lg': '1024px',
+          // => @media (min-width: 1024px) { ... }
+
+          'xl': '1280px',
+          // => @media (min-width: 1280px) { ... }
+
+          '2xl': '1320px',
+          // => @media (min-width: 1536px) { ... }
+        },
+        extend: {
+          screens: {
+            'xs': {'min':'320px', 'max':'567px'}
+
+          },
+
+          colors: {
+            welcome: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <!-- text-color  -->
+  <!-- <h1 class="text-3xl text-welcome hover:text-sky-400 text-center font-bold">Tailwind CSS</h1> -->
+  <!-- screens -->
+  <div class="container bg-gray-300 mx-auto">
+    <!-- <h1 class="text-green-600 text-2xl xs:py-10 sm:text-red-500 lg:text-center text-[#50d71e]">
+      Hello World
+    </h1> -->
+   <h2 class="text-center text-[#d63031] text-3xl">Hello World</h2>
+  </div>
+
+</body>
+
+</html>
